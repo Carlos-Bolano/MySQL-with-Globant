@@ -1,6 +1,6 @@
-# 📚 Apuntes y Ejercicios de SQL – Curso de Backend con Java
+# 📚 Apuntes y Ejercicios de SQL – Curso de Backend con Java en Globant University.
 
-Bienvenido a este repositorio, donde encontrarás mis **apuntes y ejercicios prácticos de SQL** realizados durante el módulo de SQL en mi curso de backend con Java. 💻 El archivo `db.sql` incluye una amplia variedad de comandos SQL utilizados desde la primera clase para **crear, manipular y consultar bases de datos**, con ejemplos claros y bien documentados. 📋
+Bienvenido a este repositorio, donde encontrarás mis **apuntes y ejercicios prácticos de SQL** realizados durante el módulo de SQL en mi curso de backend con Java en Globant University. 💻 El archivo `db.sql` incluye una amplia variedad de comandos SQL utilizados desde la primera clase para **crear, manipular y consultar bases de datos**, con ejemplos claros y bien documentados. 📋
 
 ---
 
@@ -42,6 +42,33 @@ Los ejercicios abarcan los siguientes temas fundamentales:
 5. 🔗 **Joins y relaciones entre tablas.**
 6. 🔑 **Uso de restricciones como `PRIMARY KEY`, `FOREIGN KEY`, `NOT NULL`, y `DEFAULT`.**
 7. 📊 **Ordenamiento y agrupamiento de datos.**
+
+---
+
+## 📝 Clases Cubiertas Hasta el Momento
+
+El archivo `db.sql` refleja el contenido cubierto hasta ahora en el curso, las clases abordadas incluyen:
+
+1. **Base de datos Relacionales - MySQL: Primeros pasos con MySQL**
+
+   - Introducción a los conceptos básicos de bases de datos relacionales.
+   - Uso de MySQL como Sistema de Gestión de Bases de Datos (SGBD).
+
+2. **Base de datos Relacionales - MySQL: Lenguaje DDL Y DML**
+
+   - Lenguaje de definición de datos (DDL) para crear y modificar la estructura de la base de datos.
+   - Lenguaje de manipulación de datos (DML) para insertar, actualizar y eliminar datos.
+
+3. **Base de datos Relacionales - MySQL: Comando Select**
+
+   - Uso básico del comando `SELECT` para consultar datos de la base de datos.
+
+4. **Base de datos Relacionales - MySQL: Avanzando con el uso de la cláusula Select**
+
+   - Técnicas avanzadas con `SELECT`: funciones de agregación, subconsultas y cláusulas `WHERE` complejas.
+
+5. **Base de datos Relacionales - MySQL: Consultas multitablas**
+   - Consultas que involucran múltiples tablas utilizando uniones pero sin usar (`JOIN`).
 
 ---
 
