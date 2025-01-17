@@ -20,6 +20,7 @@ A continuación, un resumen de los **comandos SQL más importantes** que aparece
 - 🔄 **`UPDATE`** – Actualizar datos existentes en las tablas.
 - 🗑️ **`DELETE`** – Eliminar datos de las tablas.
 - 🔗 **`JOIN`** – Realizar combinaciones entre tablas.
+- 🏷️ **`DISTINCT`** – Obtener valores únicos en las consultas.
 - 🔑 **`PRIMARY KEY`** – Definir claves primarias en tablas.
 - 🚀 **`AUTO_INCREMENT`** – Automatizar el incremento de valores en columnas.
 - 🚫 **`NOT NULL`** – Establecer que las columnas no permitan valores nulos.
@@ -28,6 +29,26 @@ A continuación, un resumen de los **comandos SQL más importantes** que aparece
 - 📊 **`ORDER BY`** – Ordenar los resultados de las consultas.
 - 📋 **`GROUP BY`** – Agrupar los resultados de las consultas.
 - ⚙️ **`HAVING`** – Filtrar resultados de grupos.
+
+### 📈 Funciones de Agregación
+
+- 🏆 **`MAX`** – Obtener el valor máximo de una columna.
+- 📉 **`MIN`** – Obtener el valor mínimo de una columna.
+- ➕ **`SUM`** – Calcular la suma de valores en una columna.
+- 📊 **`AVG`** – Calcular el promedio de valores en una columna.
+- 🔢 **`COUNT`** – Contar el número de filas que cumplen una condición.
+
+### 🔍 Funciones de Formato y Manipulación de Datos
+
+- 🔢 **`FORMAT`** – Formatear números con separadores de miles y decimales.
+  - Ejemplo: `FORMAT(1234567.89, 2)` → `1,234,567.89`
+- 🎯 **`ROUND`** – Redondear números al número de decimales especificado.
+- 💯 **`DECIMAL`** – Especificar la cantidad de dígitos antes y después del punto decimal en una columna o cálculo.
+- 🗓️ **`DATE_FORMAT`** – Dar formato a las fechas en consultas.
+  - Ejemplo: `DATE_FORMAT('2023-01-15', '%d-%m-%Y')` → `15-01-2023`
+- 🕒 **`TIME_FORMAT`** – Formatear datos de tipo hora.
+- 🔡 **`CONCAT`** – Combinar valores de múltiples columnas en una sola cadena.
+  - Ejemplo: `CONCAT('Hola', ' ', 'Mundo')` → `Hola Mundo`
 
 ---
 
