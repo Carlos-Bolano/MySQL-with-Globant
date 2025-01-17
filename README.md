@@ -68,7 +68,11 @@ El archivo `db.sql` refleja el contenido cubierto hasta ahora en el curso, las c
    - Técnicas avanzadas con `SELECT`: funciones de agregación, subconsultas y cláusulas `WHERE` complejas.
 
 5. **Base de datos Relacionales - MySQL: Consultas multitablas**
+
    - Consultas que involucran múltiples tablas utilizando uniones pero sin usar (`JOIN`).
+
+6. **Base de datos Relacionales - MySQL: Introducción a los JOIN en MySQL**
+   - Uso de las uniones (JOIN) para combinar datos de múltiples tablas en una consulta, explorando los diferentes tipos de uniones como INNER JOIN, LEFT JOIN, RIGHT JOIN y FULL JOIN.
 
 ---
 
