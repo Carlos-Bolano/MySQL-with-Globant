@@ -93,7 +93,13 @@ El archivo `db.sql` refleja el contenido cubierto hasta ahora en el curso, las c
    - Consultas que involucran múltiples tablas utilizando uniones pero sin usar (`JOIN`).
 
 6. **Base de datos Relacionales - MySQL: Introducción a los JOIN en MySQL**
+
    - Uso de las uniones (`JOIN`) para combinar datos de múltiples tablas en una consulta, explorando los diferentes tipos de uniones como `INNER JOIN`, `LEFT JOIN`, y `RIGHT JOIN`
+
+7. **Base de datos Relacionales - MySQL: USO de Tablas Temporales**
+
+   - Introducción a las tablas temporales y su uso en consultas complejas.
+   - Ejercicios prácticos con `CREATE TEMPORARY TABLE`, consultas sobre tablas temporales, y eliminación de tablas temporales con `DROP TEMPORARY TABLE`.
 
 ---
 
