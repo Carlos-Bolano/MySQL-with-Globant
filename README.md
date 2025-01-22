@@ -40,6 +40,12 @@ A continuación, un resumen de los **comandos SQL más importantes** que aparece
 
 ### 🔍 Funciones de Formato y Manipulación de Datos
 
+- 🔤 **`LOWER`** – Convertir texto a minúsculas.
+- 🔠 **`UPPER`** – Convertir texto a mayúsculas.
+- 🔎 **`SUBSTRING`** – Extraer una subcadena de una cadena de texto.
+- 🧮 **`CHAR_LENGTH`** – Obtener la longitud de una cadena de texto.
+- ✂️ **`TRIM`** – Eliminar espacios en blanco de los extremos de una cadena.
+
 - 🔢 **`FORMAT`** – Formatear números con separadores de miles y decimales.
   - Ejemplo: `FORMAT(1234567.89, 2)` → `1,234,567.89`
 - 🎯 **`ROUND`** – Redondear números al número de decimales especificado.
@@ -100,6 +106,11 @@ El archivo `db.sql` refleja el contenido cubierto hasta ahora en el curso, las c
 
    - Introducción a las tablas temporales y su uso en consultas complejas.
    - Ejercicios prácticos con `CREATE TEMPORARY TABLE`, consultas sobre tablas temporales, y eliminación de tablas temporales con `DROP TEMPORARY TABLE`.
+
+8. **Base de datos Relacionales - MySQL: Funciones de Texto**
+
+   - Uso de funciones de texto como `LOWER`, `UPPER`, `SUBSTRING`, `CHAR_LENGTH`, y `TRIM`.
+   - Ejercicios prácticos para manipular cadenas y realizar consultas avanzadas.
 
 ---
 
