@@ -1371,3 +1371,155 @@ WHERE salario = (
         FROM empleados
     )
 );
+
+
+-- Base de datos Relacionales - MySQL: Funciones de Texto
+-- Ejercicios con funciones de texto - Parte 1
+
+-- Ejercicios funciones de texto:
+-- Crea una tabla llamada "estudiantes" con cinco columnas: "id" de tipo INT como clave primaria, "nombre" de tipo VARCHAR(50), "apellido" de tipo VARCHAR(50), "edad" de tipo INT y "promedio" de tipo FLOAT. Luego, inserta cinco filas en la tabla "estudiantes" con los siguientes datos:
+-- ID: 1, Nombre: Juan, Apellido: Pérez, Edad: 22, Promedio: 85.5
+-- ID: 2, Nombre: María, Apellido: Gómez, Edad: 21, Promedio: 90.0
+-- ID: 3, Nombre: Luis, Apellido: Rodríguez, Edad: 20, Promedio: 88.5
+-- ID: 4, Nombre: Ana, Apellido: Martínez, Edad: 23, Promedio: 92.0
+-- ID: 5, Nombre: Carlos, Apellido: López, Edad: 22, Promedio: 86.5
+-- Crear la tabla "estudiantes"
+CREATE TABLE estudiantes (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    apellido VARCHAR(50),
+    edad INT,
+    promedio FLOAT
+);
+-- Insertar las filas en la tabla "estudiantes"
+INSERT INTO estudiantes (id, nombre, apellido, edad, promedio)
+VALUES (1, 'Juan', 'Pérez', 22, 85.5),
+    (2, 'María', 'Gómez', 21, 90.0),
+    (3, 'Luis', 'Rodríguez', 20, 88.5),
+    (4, 'Ana', 'Martínez', 23, 92.0),
+    (5, 'Carlos', 'López', 22, 86.5);
+
+-- Encuentra la longitud del nombre del estudiante con el nombre "Luis" y apellido "Rodríguez".
+SELECT CHAR_LENGTH(CONCAT(e.nombre , ' ', e.apellido)) as longitud_nombre
+FROM estudiantes e
+WHERE e.nombre = 'Luis' AND e.apellido = 'Rodríguez';
+
+-- Concatena el nombre y el apellido del estudiante con el nombre "María" y apellido "Gómez" con un espacio en el medio. 
+SELECT CONCAT(e.nombre , ' ', e.apellido) as nombre_completo
+FROM estudiantes e
+WHERE e.nombre = 'María' AND e.apellido = 'Gómez';
+
+-- Encuentra la posición de la primera 'e' en el apellido del estudiante con el nombre "Juan" y apellido "Pérez".
+SELECT LOCATE('e' , e.apellido) as localizar_e
+FROM estudiantes e
+WHERE e.nombre = 'Juan' AND e.apellido = 'Pérez';
+-------------- O ------------
+SELECT POSITION('e' IN e.apellido) as localizar_e
+FROM estudiantes e
+WHERE e.nombre = 'Juan' AND e.apellido = 'Pérez';
+
+-- Inserta la cadena ' García' en la posición 3 del nombre del estudiante con el nombre "Ana" y apellido "Martínez".
+SELECT INSERT(e.nombre, 3, 7,' García') as insertar_garcia
+FROM estudiantes e
+WHERE e.nombre = 'Juan' AND e.apellido = 'Pérez';
+
+-- Convierte el nombre del estudiante con el nombre "Luis" y apellido "Rodríguez" a minúsculas. (LOWER)
+SELECT LOWER(e.nombre) as nombre_minuscula
+FROM estudiantes e
+WHERE e.nombre = 'Luis' AND e.apellido = 'Rodríguez';
+
+-- Convierte el apellido del estudiante con el nombre "Juan" y apellido "Pérez" a mayúsculas. (UPPER)
+SELECT UPPER(e.nombre) as nombre_minuscula
+FROM estudiantes e
+WHERE e.nombre = 'Juan' AND e.apellido = 'Pérez';
+
+-- Obtiene los primeros 4 caracteres del apellido del estudiante con el nombre "María" y apellido "Gómez". (LEFT)
+SELECT LEFT(e.apellido, 4) as obtener_caracteres
+FROM estudiantes e
+WHERE e.nombre = 'María' AND e.apellido = 'Gómez';
+
+-- Obtiene los últimos 3 caracteres del apellido del estudiante con el nombre "Ana" y apellido "Martínez". (RIGHT)
+SELECT RIGHT(e.apellido, 4) as obtener_caracteres
+FROM estudiantes e
+WHERE e.nombre = 'Ana' AND e.apellido = 'Martínez';
+
+-- Encuentra la posición de la primera 'o' en el nombre del estudiante con el nombre "Carlos" y apellido "López". (LOCATE)
+SELECT LOCATE('o' , e.nombre) as localizar_o
+FROM estudiantes e
+WHERE e.nombre = 'Carlos' AND e.apellido = 'López';
+
+-- Encuentra la posición de la primera aparición de la letra 'a' en el nombre de la estudiante con el nombre "María" y apellido "Gómez".
+SELECT POSITION('a' , e.nombre) as localizar_a
+FROM estudiantes e
+WHERE e.nombre = 'María' AND e.apellido = 'Gómez';
+
+-- Reemplaza 'a' con 'X' en el nombre del estudiante con el nombre "Ana" y apellido "Martínez". 
+SELECT REPLACE(e.nombre, 'a', 'X') as remplazar_a
+FROM estudiantes e
+WHERE e.nombre = 'Ana' AND e.apellido = 'Martínez';
+
+-- Encuentra la subcadena de 3 caracteres de longitud de la columna 'nombre' del estudiante con el nombre "María" y apellido "Gómez", comenzando en la posición 2.
+SELECT SUBSTR(e.nombre, 2, 3) as subcadena_3
+FROM estudiantes e
+WHERE e.nombre = 'María' AND e.apellido = 'Gómez';
+
+-- Combina los nombres de todos los estudiantes en una única cadena separada por guiones con order by.
+SELECT GROUP_CONCAT(e.nombre ORDER BY e.nombre ASC SEPARATOR '_') as group_concat
+FROM estudiantes e;
+
+-- Combina los nombres y apellidos de todos los estudiantes en una única cadena separada por un guion vertical (|).
+SELECT GROUP_CONCAT(CONCAT(e.nombre, e.apellido) SEPARATOR '|') as group_concat
+FROM estudiantes e;
+
+-- Elimina los espacios en blanco iniciales del texto "    … usé muchos espacios    ".
+SELECT LTRIM('    … usé muchos espacios    .') as quitar_espacios;
+---------------- o ----------------
+SELECT TRIM(LEADING ' ' FROM '    … usé muchos espacios    .') as quitar_espacios;
+
+-- Elimina los espacios en blanco finales del texto "    … usé muchos espacios    ".
+SELECT RTRIM('    … usé muchos espacios    .') as quitar_espacios;
+---------------- o ----------------
+SELECT TRIM(TRAILING ' ' FROM '    … usé muchos espacios    .') as quitar_espacios;
+
+-- Cita el resultado de los dos ejercicios anteriores utilizando la función QUOTE.
+SELECT QUOTE((SELECT TRIM(TRAILING ' ' FROM '    … usé muchos espacios    .') as quitar_espacios)) AS texto_citado_iniciales,
+       QUOTE((SELECT TRIM(LEADING ' ' FROM '    … usé muchos espacios    .') as quitar_espacios)) AS texto_citado_finales;
+
+-- Ejercicios con funciones de texto - Parte 2
+-- ✏️Ejercicios funciones de texto
+-- Repite el nombre y apellido del estudiante con el nombre "Juan" y apellido "Pérez" tres veces. 
+SELECT REPEAT(CONCAT(nombre, ' ', apellido), 3) AS repetido
+FROM estudiantes
+WHERE nombre = 'Juan' AND apellido = 'Pérez';
+
+-- Invierte el nombre del estudiante con el nombre "Ana" y apellido "Martínez". 
+SELECT REVERSE(nombre) AS nombre_invertido
+FROM estudiantes
+WHERE nombre = 'Ana' AND apellido = 'Martínez';
+
+-- Devuelve una cadena que contenga 8 caracteres de espacio usando la función SPACE y muéstrala con la función QUOTE.
+SELECT QUOTE(SPACE(8)) AS espacios_con_cita;
+
+-- Extrae una subcadena que contiene el nombre del estudiante con el nombre "María" y apellido "Gómez" antes de la segunda a utilizando SUBSTRING_INDEX.
+SELECT SUBSTRING_INDEX(nombre, 'a', 2) AS subcadena_antes_segunda_a
+FROM estudiantes
+WHERE nombre = 'María' AND apellido = 'Gómez';
+
+-- Combina las edades de todos los estudiantes en una única cadena separada por comas y orden descendente.
+SELECT GROUP_CONCAT(edad ORDER BY edad DESC SEPARATOR ',') AS edades_descendentes
+FROM estudiantes;
+
+-- Elimina las ‘a’ del nombre' del estudiante con el nombre "Ana" y apellido "Martínez" usando la función REPLACE. 
+SELECT REPLACE(nombre, 'a', '') AS nombre_sin_a
+FROM estudiantes
+WHERE nombre = 'Ana' AND apellido = 'Martínez';
+
+-- Rellena a la derecha el promedio del estudiante con el nombre "Luis" y apellido "Rodríguez" con asteriscos hasta una longitud total de 10 caracteres. 
+SELECT RPAD(FORMAT(promedio, 2), 10, '*') AS promedio_rellenado
+FROM estudiantes
+WHERE nombre = 'Luis' AND apellido = 'Rodríguez';
+
+-- Obtén el promedio del estudiante con nombre 'Carlos' y apellido 'López', formateado con dos decimales y utilizando la configuración regional 'es_AR'.
+SELECT FORMAT(promedio, 2, 'es_AR') AS promedio_formateado
+FROM estudiantes
+WHERE nombre = 'Carlos' AND apellido = 'López';
