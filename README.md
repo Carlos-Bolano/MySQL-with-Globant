@@ -112,6 +112,11 @@ El archivo `db.sql` refleja el contenido cubierto hasta ahora en el curso, las c
    - Uso de funciones de texto como `LOWER`, `UPPER`, `SUBSTRING`, `CHAR_LENGTH`, y `TRIM`.
    - Ejercicios prácticos para manipular cadenas y realizar consultas avanzadas.
 
+9. **Base de datos Relacionales - MySQL: Funciones de Fecha y Hora**
+
+   - Uso de funciones Fecha y Hora como `DATE_ADD`, `TIME`, `TIMEDIFF`, `SYSDATE`, y `PERIOD_ADD`.
+   - Ejercicios prácticos para manipular fechas y realizar consultas avanzadas.
+
 ---
 
 ## 🎯 Objetivo del Repositorio
